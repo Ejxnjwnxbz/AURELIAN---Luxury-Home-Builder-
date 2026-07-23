@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Custom Renovations | AURELIAN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#690005",
+                    "on-primary-container": "#504500",
+                    "secondary-fixed-dim": "#c8c6c7",
+                    "border-low-light": "rgba(197, 179, 88, 0.2)",
+                    "on-tertiary-fixed-variant": "#464749",
+                    "surface-container-highest": "#343533",
+                    "background": "#131412",
+                    "tertiary": "#ceced0",
+                    "secondary": "#c8c6c7",
+                    "outline-variant": "#4b4738",
+                    "muted-slate": "#2D2E30",
+                    "champagne-gold": "#C5B358",
+                    "on-surface-variant": "#cdc6b3",
+                    "on-secondary-fixed-variant": "#474647",
+                    "on-tertiary-container": "#444547",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#49494a",
+                    "tertiary-container": "#b3b2b4",
+                    "tertiary-fixed-dim": "#c7c6c8",
+                    "surface-tint": "#dac769",
+                    "on-background": "#e4e2df",
+                    "stone-white": "#F8F6F3",
+                    "error-container": "#93000a",
+                    "tertiary-fixed": "#e3e2e4",
+                    "on-tertiary": "#2f3032",
+                    "surface-container-high": "#2a2a28",
+                    "surface-container-lowest": "#0e0e0d",
+                    "on-secondary": "#303031",
+                    "inverse-on-surface": "#30312f",
+                    "on-tertiary-fixed": "#1a1c1d",
+                    "on-secondary-container": "#bab8b9",
+                    "primary-fixed-dim": "#dac769",
+                    "outline": "#96917f",
+                    "primary": "#e2cf70",
+                    "on-primary": "#393000",
+                    "surface-container-low": "#1b1c1a",
+                    "surface-dim": "#131412",
+                    "primary-container": "#c5b358",
+                    "on-secondary-fixed": "#1b1b1c",
+                    "surface": "#131412",
+                    "on-surface": "#e4e2df",
+                    "inverse-surface": "#e4e2df",
+                    "surface-variant": "#343533",
+                    "secondary-fixed": "#e5e2e3",
+                    "on-error-container": "#ffdad6",
+                    "deep-charcoal": "#1A1A1B",
+                    "surface-container": "#1f201e",
+                    "on-primary-fixed-variant": "#524700",
+                    "on-primary-fixed": "#211b00",
+                    "surface-bright": "#393938",
+                    "primary-fixed": "#f7e382",
+                    "inverse-primary": "#6c5e06"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "5rem",
+                    "stack-md": "1.5rem",
+                    "stack-lg": "3rem",
+                    "section-gap": "8rem",
+                    "gutter": "2rem",
+                    "stack-sm": "0.5rem",
+                    "margin-mobile": "1.5rem",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "label-caps": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "nav-item": ["Montserrat"],
+                    "display-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "nav-item": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["72px", {"lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .before-after-container:hover .after-image {
+            clip-path: inset(0 0 0 0);
+        }
+        .after-image {
+            clip-path: inset(0 0 0 50%);
+            transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            background: rgba(45, 46, 48, 0.4);
+            border: 1px solid rgba(197, 179, 88, 0.1);
+        }
+        .gold-underline {
+            position: relative;
+        }
+        .gold-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #C5B358;
+            transition: width 0.3s ease;
+        }
+        .gold-underline:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-champagne-gold selection:text-deep-charcoal overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-deep-charcoal border-b border-border-low-light transition-all duration-500">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-on-surface">AURELIAN</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors" href="#">Available Homes</a>
+<a class="font-nav-item text-nav-item text-primary border-b border-primary pb-1" href="#">Our Process</a>
+<button class="bg-primary-container text-on-primary-fixed px-6 py-2 font-label-caps text-label-caps transition-all duration-500 hover:opacity-90">Start Your Build</button>
+</div>
+<!-- Mobile Menu Trigger -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary cursor-pointer">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section: Metamorphosis -->
+<section class="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 w-full h-full before-after-container group cursor-ew-resize">
+<!-- Before Image (Base) -->
+<div class="absolute inset-0 bg-cover bg-center grayscale contrast-125" data-alt="A moody, high-contrast interior shot of a neglected vintage luxury estate room with peeling wallpaper, dusty ornate moldings, and dim natural light filtering through tall windows. The aesthetic is gothic and desolate, emphasizing the structural potential beneath the decay in a modern noir style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQBLkqyr39-mdy9E8RgpEzo_zLIA89jRHhOOWx7oNZukz6sjp1SEc4J73hyWCxOR63XUqNXoKMfvRFsNeL0YN-SsVoNEqyrn7PJbOzCUSRyomume0GbaFx8gqCIa2pAbAvtovAX9-SGKbHMGauDr5G7ezLXK1ZE1v5B5GyRYbatohVlaupYr7N02tckWa7XpvOylWedsd4aO_3ueJ-CVHPhi3_Fl7ukKpwJvTOvUcjZYmqVTPDG-fv')">
+</div>
+<!-- After Image (Overlay) -->
+<div class="absolute inset-0 bg-cover bg-center after-image" data-alt="A breathtakingly transformed luxury master suite in the same space, featuring polished dark wood floors, champagne gold leaf accents on restored crown moldings, and a minimalist sculptural fireplace. The lighting is warm and dramatic, highlighting the seamless blend of historic soul and ultra-modern architectural precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDB_fYyCIZ6Fl5cA8jjuqj3EX074XD-9zeCCSr2wytZPWs0zB0Q-Sw8Qa2wcQAUGflWOfmdoFylhKgisguIN1biA6IjOkRBNedA7IIdD_G4hzw5j7bb0z302qKTP8QGujACIkY6Q66zM_hSzqzvpjgNbZpmsISr0DlckrRpZypD-slr5YbVxmFjrTwbjsvehO0ytLPZ9cm2-fMG9hUGD5XMrre5yaEPl7L0ebjj3kzYs_B4yRZcvbRS')">
+</div>
+<!-- Middle Divider (Indicator) -->
+<div class="absolute inset-y-0 left-1/2 w-px bg-champagne-gold z-10 hidden md:block">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-champagne-gold flex items-center justify-center bg-deep-charcoal text-champagne-gold">
+<span class="material-symbols-outlined text-sm">unfold_more_double</span>
+</div>
+</div>
+</div>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop pointer-events-none">
+<p class="font-label-caps text-label-caps text-champagne-gold mb-4 tracking-[0.3em] uppercase">The Metamorphosis</p>
+<h1 class="font-display-lg text-headline-xl md:text-display-lg text-stone-white mb-8 max-w-4xl mx-auto leading-tight">
+                    Custom Renovations: <br/><span class="italic font-normal">Transformative Artistry</span>
+</h1>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 pointer-events-auto">
+<button class="bg-champagne-gold text-deep-charcoal px-10 py-4 font-label-caps text-label-caps hover:scale-105 transition-transform duration-300">Explore The Gallery</button>
+<button class="border border-champagne-gold text-champagne-gold px-10 py-4 font-label-caps text-label-caps hover:bg-champagne-gold/10 transition-colors">Private Inquiry</button>
+</div>
+</div>
+<!-- Bottom Fade -->
+<div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent"></div>
+</section>
+<!-- Section 1: The Art of Reimagination -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 scroll-reveal">
+<p class="font-label-caps text-label-caps text-champagne-gold mb-6 tracking-widest uppercase">Philosophy</p>
+<h2 class="font-headline-md text-headline-md md:text-headline-xl text-stone-white mb-8 leading-tight">The Art of <br/>Reimagination</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-10 leading-relaxed">
+                        At Aurelian, we do not simply renovate; we curate a rebirth. Every structure possesses a unique soul—an architectural DNA that deserves preservation. Our process involves meticulously breathing new life into existing foundations, elevating historical character with modern structural precision.
+                    </p>
+<div class="flex items-center gap-4 text-champagne-gold">
+<span class="h-px w-12 bg-champagne-gold"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Preserving the legacy</span>
+</div>
+</div>
+<div class="md:col-span-7 relative scroll-reveal" style="transition-delay: 200ms;">
+<div class="aspect-[4/5] md:aspect-[16/10] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up of a master craftsman hand-restoring an intricate antique ceiling medallion in a dark, atmospheric room. The gold leaf application catches a single beam of light, while the surrounding space remains in sophisticated shadow. The style is ultra-luxurious and precise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Pq6Ey_4q8sLIxqGrYQhM1oOP5hciwtnfnJxB0xn5yfsx9sdKzkUhlLMuxUMqQldV5PzALHcL9K_b7aMhZH_HrEpYsg6ZYyTjbn65K0UFovjeoGCuCr6NWUdlFBabBK2WqXxKt8KWYadWpfAGZJlhIlUzUtYHMA1x5I7kMQ9dST6WgZaSxsZg_EJW3C_x4aJkqfIDLjCE9WkStsXgN7P9Ih9fZJ4lIpF52jPfnAwf21mBwjHA9NKd"/>
+</div>
+<div class="absolute -bottom-10 -left-10 w-48 h-48 border border-border-low-light hidden lg:block"></div>
+</div>
+</div>
+</section>
+<!-- Section 2: Bespoke Transformations (Bento Grid) -->
+<section class="py-section-gap bg-surface-container-lowest overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16 text-center">
+<p class="font-label-caps text-label-caps text-champagne-gold mb-4 tracking-widest uppercase">Collections</p>
+<h2 class="font-headline-md text-headline-md md:text-headline-xl text-stone-white">Bespoke Transformations</h2>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Whole-Home Estates -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden cursor-pointer">
+<div class="aspect-square w-full h-full">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A wide-angle shot of a sprawling European-style estate transformed with modern brutalist glass additions. The sunset lighting casts long, dramatic shadows across a manicured lawn and reflecting pool. The dark palette emphasizes the structure's monolithic elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA48SGlWSkuHG-rrEgHikDfhEky8yJdd76C9VZPfKBQddWC9OxUUnTi0QY0G_ruFkX7xhEsWmXRdlXxK3N3vhLXkHzFB_e7i3JtX4mDZhaHrRvQkzXrc9gI2kgcDsFXb4xWybBsF_UQQvQ7hLy6as8yF7yiXFBbMo5kwY7-iH5VuW-pbNqAJvqM9Dcd4GypwHJbQR5l1wiJ37PblpfKaOTEHeKOGz0_MYXeZ8TFoba4FJv0qkic4wIr"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 text-stone-white">
+<p class="font-label-caps text-label-caps mb-2 tracking-widest">CURATED ESTATE</p>
+<h3 class="font-headline-md text-headline-md">Whole-Home Estates</h3>
+</div>
+</div>
+<!-- Kitchen & Culinary Suites -->
+<div class="md:col-span-2 relative group overflow-hidden cursor-pointer">
+<div class="aspect-video w-full h-full">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A ultra-luxury kitchen renovation featuring monolithic matte black marble islands and hidden champagne gold hardware. Professional-grade appliances are integrated seamlessly into minimalist cabinetry. Dramatic task lighting creates an intimate, theatrical culinary environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUODVzJfAdUSyX3AVKLhxbzahvaf8-e_wSvh-XdWALk95ghIHB_Y2yOWRhbeB3NYQWuK2Jh8wBaUYpK-yHbHf9ZdiZH-HplIbh-_h18FROMuM5O33Yuwjbp_-ri5me14MD6COKdVe1glKaq-EJpWeJUF12odUMWbjQaKUu91CdP3N4XenMxRSQ1AhJMCmECL9V4FOx-T4-aXtUCP12vZS1XMTSRak8ZPWw5bnq6YX42G5dPjFJSW95"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 text-stone-white">
+<p class="font-label-caps text-label-caps mb-2 tracking-widest">EPICUREAN DESIGN</p>
+<h3 class="font-headline-md text-headline-md">Kitchen &amp; Culinary Suites</h3>
+</div>
+</div>
+<!-- Master Sanctuaries -->
+<div class="relative group overflow-hidden cursor-pointer">
+<div class="aspect-square w-full h-full">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="A master bathroom sanctuary with a freestanding black stone soaking tub positioned in front of a floor-to-ceiling window overlooking a private moonlit garden. The floor is heated dark slate with champagne gold accents in the plumbing fixtures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkBTyqg72u0K1BXkVMv1oYTlwP2HqcqH7s4NsW-d7D1w_1KxxlEtpRP2bHVjN8Mo_CEYKT_ONAegkGy78jADOuEWbXLz4iiaLAp01dnwVvJJhFk257YouHQARR4K-L0Fde9H9kt5MhZudjCA6coZYEdrIw-lsHr6dm9zPMME3l783s8EKCINvFOuLVVlrAUUznepfpRjDmHwGj5JHLILfl3TORhVnOSKPdNAO6ercG_tLAS3hyIdsM"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 text-stone-white">
+<p class="font-label-caps text-[10px] mb-1 tracking-widest">PRIVATE RETREAT</p>
+<h3 class="font-headline-md text-headline-md text-2xl">Master Sanctuaries</h3>
+</div>
+</div>
+<!-- Outdoor Living Oasis -->
+<div class="relative group overflow-hidden cursor-pointer">
+<div class="aspect-square w-full h-full">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="An outdoor living space featuring a sunken fire pit lounge made of polished concrete and custom mahogany seating. A dramatic waterfall feature flows into a dark-tiled infinity pool under a star-filled sky. Golden accent lighting highlights the architectural lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3bKXuJribZ-xqbDiptAGJXFIuWj5XH2Ds7VyeAtY5RggtLT32VAHNeu0WHm2HFSpR748DP4wyP5D8UP_e-gxnICKB5tXP31prNGhSYcXeWaaTq6msBd5zs8KYW2q75xnJtOOHr48Emwd0QGw2sOLnOTbMur5CYJ4ZAWJf-VImoB69ftUrr3Yrc7r28or0OjeayZiKNgr2FnWixBUK6dbXlTuYa62Vw1cii9-wuwKRdA1T5g3q9yz-"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 text-stone-white">
+<p class="font-label-caps text-[10px] mb-1 tracking-widest">AL FRESCO LUXURY</p>
+<h3 class="font-headline-md text-headline-md text-2xl">Outdoor Living Oasis</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: The Seamless Integration -->
+<section class="py-section-gap relative overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative order-2 lg:order-1 scroll-reveal">
+<div class="glass-panel p-4 md:p-8 relative z-10">
+<img class="w-full grayscale brightness-75" data-alt="A complex architectural rendering showing a wireframe overlay of a modern addition connecting to a classic brick manor. The image highlights the technical precision of the joinery and the aesthetic harmony between heritage materials and modern glass surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNCPqZoF12wcH--Rcpbe4Jnb4L79uN69zUVr03NzamGyPAKeM5_b1ksrBkd3BEvWqtQVipyOieqabzSCyyuUruWoiauVWKP_AWEg2uDi2qUN_mhG4qZkGa-P1cjoBfSd-C3gf0FuTOGZsdbmnyECNmkUuXI6QkMvXgJeJQNaJTuvPlt7e5tIlNEl80iAX03M_FCqHmSbWU1YClc_e85-X2L9YjOjOHfRqWyxFDgB_VqT4y9Z3R9lTu"/>
+<div class="mt-8 flex flex-col gap-6">
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-champagne-gold">architecture</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-stone-white mb-2">STRUCTURAL HARMONY</h4>
+<p class="text-sm text-on-surface-variant">Advanced engineering ensuring the new addition shares the load and movement profile of the original foundation.</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-champagne-gold">palette</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-stone-white mb-2">MATERIAL CONTINUITY</h4>
+<p class="text-sm text-on-surface-variant">Sourcing matching period-accurate materials or creating deliberate, high-contrast modern transitions.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Decorative Element -->
+<div class="absolute -top-10 -right-10 w-64 h-64 border-l border-t border-champagne-gold/20 -z-10"></div>
+</div>
+<div class="order-1 lg:order-2 scroll-reveal" style="transition-delay: 200ms;">
+<p class="font-label-caps text-label-caps text-champagne-gold mb-6 tracking-widest uppercase">The Methodology</p>
+<h2 class="font-headline-md text-headline-md md:text-headline-xl text-stone-white mb-8 leading-tight">The Seamless Integration</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-8">
+                        The true mark of a master renovation is invisibility. Our additions are designed to blend perfectly with existing architecture, ensuring that the transition from old to new is felt as a natural evolution rather than a disruption.
+                    </p>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-10">
+                        We leverage laser-scanning technology to map every inch of your existing structure, allowing for millimetric precision in the design of new modules and integrations.
+                    </p>
+<a class="inline-flex items-center gap-3 text-champagne-gold font-label-caps text-label-caps uppercase tracking-widest gold-underline" href="#">
+                        View Technical Process
+                        <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Section 4: Start Your Transformation (CTA) -->
+<section class="py-section-gap relative">
+<div class="absolute inset-0 z-0">
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="glass-panel py-20 px-8 md:px-20 text-center border-champagne-gold/30">
+<p class="font-label-caps text-label-caps text-champagne-gold mb-6 tracking-[0.4em] uppercase">Private Consultation</p>
+<h2 class="font-display-lg text-headline-xl md:text-display-lg text-stone-white mb-10 leading-none">Start Your Transformation</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                        We invite you to a private architectural review of your property. Let us explore the latent potential of your home and discuss how AURELIAN can manifest your vision.
+                    </p>
+<div class="flex flex-col md:flex-row justify-center gap-6">
+<button class="bg-champagne-gold text-deep-charcoal px-12 py-5 font-label-caps text-label-caps hover:bg-stone-white transition-colors duration-300">Book A Consultation</button>
+<button class="border border-champagne-gold text-champagne-gold px-12 py-5 font-label-caps text-label-caps hover:bg-champagne-gold hover:text-deep-charcoal transition-all duration-300">Request Portfolio</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-deep-charcoal border-t border-border-low-light">
+<div class="grid grid-cols-12 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 mb-10 md:mb-0">
+<div class="font-display-lg text-headline-md text-primary mb-6">AURELIAN</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs italic">
+                    Architects of legacy. Builders of the extraordinary.
+                </p>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Process</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Inquiry</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h5>
+<ul class="flex flex-col gap-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-4 mt-10 md:mt-0">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">CONNECT</h5>
+<div class="flex gap-6 mb-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-50">© 2024 AURELIAN BESPOKE HOMES. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Before/After comparison interactive logic (for mobile/touch)
+        const baContainer = document.querySelector('.before-after-container');
+        const afterImg = document.querySelector('.after-image');
+        
+        if (baContainer) {
+            baContainer.addEventListener('mousemove', (e) => {
+                const rect = baContainer.getBoundingClientRect();
+                const x = ((e.clientX - rect.left) / rect.width) * 100;
+                afterImg.style.clipPath = `inset(0 0 0 ${x}%)`;
+            });
+
+            baContainer.addEventListener('mouseleave', () => {
+                afterImg.style.clipPath = `inset(0 0 0 50%)`;
+            });
+        }
+    </script>
+<div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+<!-- Chat Window (Hidden by default, toggleable in a real app) -->
+<div class="hidden md:flex flex-col w-80 h-96 bg-deep-charcoal border border-champagne-gold/30 shadow-2xl overflow-hidden transition-all duration-500">
+<div class="bg-surface-container-highest p-4 border-b border-champagne-gold/20 flex justify-between items-center">
+<h4 class="font-headline-md text-stone-white text-lg">Aurelian Concierge</h4>
+<span class="material-symbols-outlined text-champagne-gold cursor-pointer text-sm">close</span>
+</div>
+<div class="flex-1 p-4 flex flex-col gap-4 overflow-y-auto">
+<div class="bg-surface-container p-3 max-w-[80%] self-start">
+<p class="font-body-md text-sm text-on-surface-variant">Welcome to Aurelian. How may we assist your transformation today?</p>
+</div>
+</div>
+<div class="p-4 border-t border-champagne-gold/10">
+<div class="flex items-center gap-2 border border-border-low-light p-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm text-on-surface flex-1 font-body-md" placeholder="Type your inquiry..." type="text"/>
+<span class="material-symbols-outlined text-champagne-gold cursor-pointer">send</span>
+</div>
+</div>
+</div>
+<!-- FAB and Label -->
+<div class="flex items-center gap-3 group cursor-pointer">
+<div class="bg-stone-white px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<span class="font-label-caps text-[10px] text-deep-charcoal tracking-widest uppercase">Inquire Now</span>
+</div>
+<div class="w-16 h-16 bg-champagne-gold rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-deep-charcoal text-2xl">chat</span>
+</div>
+</div>
+</div></body></html>

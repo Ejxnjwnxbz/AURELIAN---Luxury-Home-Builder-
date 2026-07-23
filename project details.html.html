@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desert Mirage - Aurelian Bespoke Homes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#e2cf70",
+                        "on-primary-fixed-variant": "#524700",
+                        "on-tertiary-container": "#444547",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#cdc6b3",
+                        "stone-white": "#F8F6F3",
+                        "surface-container-lowest": "#0e0e0d",
+                        "surface": "#131412",
+                        "surface-tint": "#dac769",
+                        "on-surface": "#e4e2df",
+                        "on-secondary-fixed-variant": "#474647",
+                        "background": "#131412",
+                        "error": "#ffb4ab",
+                        "champagne-gold": "#C5B358",
+                        "secondary-fixed": "#e5e2e3",
+                        "outline": "#96917f",
+                        "on-primary-fixed": "#211b00",
+                        "surface-bright": "#393938",
+                        "on-tertiary": "#2f3032",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c7c6c8",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-primary-container": "#504500",
+                        "inverse-surface": "#e4e2df",
+                        "surface-container-highest": "#343533",
+                        "surface-container-high": "#2a2a28",
+                        "tertiary": "#ceced0",
+                        "on-primary": "#393000",
+                        "inverse-primary": "#6c5e06",
+                        "inverse-on-surface": "#30312f",
+                        "on-secondary": "#303031",
+                        "surface-variant": "#343533",
+                        "on-tertiary-fixed-variant": "#464749",
+                        "on-background": "#e4e2df",
+                        "muted-slate": "#2D2E30",
+                        "surface-container-low": "#1b1c1a",
+                        "tertiary-fixed": "#e3e2e4",
+                        "border-low-light": "rgba(197, 179, 88, 0.2)",
+                        "deep-charcoal": "#1A1A1B",
+                        "tertiary-container": "#b3b2b4",
+                        "on-error": "#690005",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "primary-fixed": "#f7e382",
+                        "surface-dim": "#131412",
+                        "secondary": "#c8c6c7",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "secondary-container": "#49494a",
+                        "primary-container": "#c5b358",
+                        "surface-container": "#1f201e",
+                        "primary-fixed-dim": "#dac769",
+                        "outline-variant": "#4b4738",
+                        "on-secondary-container": "#bab8b9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "1.5rem",
+                        "container-max": "1440px",
+                        "section-gap": "8rem",
+                        "stack-lg": "3rem",
+                        "stack-sm": "0.5rem",
+                        "margin-mobile": "1.5rem",
+                        "margin-desktop": "5rem",
+                        "gutter": "2rem"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Montserrat"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-xl": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "nav-item": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "nav-item": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #131412;
+            color: #e4e2df;
+        }
+
+        .glass-panel {
+            background: rgba(45, 46, 48, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(197, 179, 88, 0.2);
+        }
+
+        .input-minimal {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #2D2E30;
+            border-radius: 0;
+            color: #e4e2df;
+            transition: border-color 0.3s ease;
+            padding: 0.75rem 0;
+        }
+
+        .input-minimal:focus {
+            outline: none;
+            border-bottom-color: #C5B358;
+            box-shadow: none;
+        }
+
+        .input-minimal::placeholder {
+            color: rgba(248, 246, 243, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to top, #131412 0%, rgba(19, 20, 18, 0) 100%);
+        }
+    </style>
+</head>
+
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md">
+    <!-- TopNavBar (Shared Component) -->
+    <nav
+        class="docked full-width top-0 sticky bg-deep-charcoal border-b border-border-low-light transition-all duration-500 z-50">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <a class="font-display-lg-mobile md:font-display-lg text-headline-md tracking-tighter text-on-surface"
+                href="#">AURELIAN</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="index.html.html">Home</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="portfolio.html.html">Gallery</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="property details.html.html">Available Homes</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="12.html.html">Our Process</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="contact.html.html">Inquire</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="studio.html.html">Our Teams</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                    href="testimonials.html.html">Studio</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a class="hidden md:inline-flex bg-champagne-gold text-stone-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-[0.15em] transition-opacity hover:opacity-90"
+                    href="#">Start Your Build</a>
+                <button class="md:hidden text-primary">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[819px] md:h-[921px] flex items-end">
+            <div class="absolute inset-0 bg-cover bg-center w-full h-full z-0"
+                data-alt="A breathtaking, hyper-realistic architectural twilight photograph of a modern luxury desert home in Paradise Valley. The home features sleek, dark stone walls, expansive floor-to-ceiling glass, and warm, inviting interior lighting spilling out onto a desert landscape. The composition is expansive, dramatic, and emphasizes the integration of modern architecture with the rugged natural environment. High contrast between the deep blues of the dusk sky and the glowing champagne gold tones of the house."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBxs4E-OWDdBk12VVEo6p31YZXQ9UZywas4EuzRRbVjCP-9xSqGaXi7SuKszOlYttZrf4DMFSNmAzy87OTo1iKdIbQbWW8EALyPHkprJSgNmk0-9uFaJo5PK_w_ZL9M-6QBBI8hET7RXb5ZbqWtgu5rBUvUoIfYP9dn1hW7jOf4NjR39k5u6dQlugNpDpIbpo2SR9hidqZE4XMe0YQCTYeXwb9gV7onV3jwtrHh4zN9kJyKrZsKA9dL')">
+            </div>
+            <div class="absolute inset-0 hero-gradient z-10 pointer-events-none"></div>
+            <div
+                class="relative z-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-16 md:pb-24 flex flex-col md:flex-row justify-between items-end gap-stack-lg">
+                <div class="max-w-2xl">
+                    <p class="font-label-caps text-label-caps text-primary uppercase mb-4 tracking-[0.15em]">Paradise
+                        Valley, Arizona</p>
+                    <h1
+                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-stone-white mb-6">
+                        Desert Mirage</h1>
+                    <div class="flex items-center gap-6">
+                        <span class="font-headline-md text-headline-md text-stone-white">$24,000,000</span>
+                        <span class="w-12 h-[1px] bg-primary opacity-50 block"></span>
+                        <span
+                            class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-[0.15em]">Now
+                            Available</span>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4 w-full md:w-auto">
+                    <button
+                        class="w-full md:w-auto bg-champagne-gold text-on-primary-fixed-variant font-label-caps text-label-caps px-8 py-4 uppercase tracking-[0.15em] transition-transform hover:scale-[1.02]">Schedule
+                        a Private Tour</button>
+                    <button
+                        class="w-full md:w-auto border border-champagne-gold text-champagne-gold bg-transparent font-label-caps text-label-caps px-8 py-4 uppercase tracking-[0.15em] transition-colors hover:bg-surface-container">Download
+                        The Dossier</button>
+                </div>
+            </div>
+        </section>
+        <!-- Main Content Grid -->
+        <section
+            class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Left Column: Details -->
+            <div class="lg:col-span-8 flex flex-col gap-section-gap">
+                <!-- Property Overview -->
+                <div class="flex flex-col gap-stack-lg">
+                    <div class="flex items-center gap-4 border-b border-muted-slate pb-4">
+                        <h2
+                            class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-stone-white">
+                            Property Overview</h2>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <div class="flex flex-col gap-2">
+                            <span class="font-label-caps text-label-caps text-primary uppercase">Bedrooms</span>
+                            <span class="font-headline-md text-headline-md text-stone-white">6</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-label-caps text-label-caps text-primary uppercase">Bathrooms</span>
+                            <span class="font-headline-md text-headline-md text-stone-white">7.5</span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-label-caps text-label-caps text-primary uppercase">Interior</span>
+                            <span class="font-headline-md text-headline-md text-stone-white">12,400 <span
+                                    class="text-body-lg text-on-surface-variant">sq ft</span></span>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <span class="font-label-caps text-label-caps text-primary uppercase">Lot Size</span>
+                            <span class="font-headline-md text-headline-md text-stone-white">3.2 <span
+                                    class="text-body-lg text-on-surface-variant">acres</span></span>
+                        </div>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl leading-relaxed mt-4">
+                        A masterclass in modern desert architecture. Desert Mirage seamlessly blends the rugged beauty
+                        of Paradise Valley with uncompromising luxury. Featuring floor-to-ceiling retractable glass
+                        walls that dissolve the boundary between indoors and the sprawling desert landscape, this estate
+                        offers an unparalleled living experience defined by precision craftsmanship and austere
+                        elegance.
+                    </p>
+                </div>
+                <!-- Gallery Preview (Asymmetric) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="h-96 md:col-span-2 relative overflow-hidden group">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Interior shot of a minimalist, luxury living room in a desert home. Dark stone floors, massive glass windows revealing a cactus-studded landscape, sleek low-profile furniture in neutral tones, and subtle warm lighting accents highlighting architectural textures."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_iP1u-Pb7oGE6affpal8ZNlulGcKKuME23l8nlGNBsiKIc-kWLnoojDu1axzPpjp3cQyqFl8yZ1nc3Y4lFUsNi1ryqPe5TRWWMXKAh1VmRtwSVofVdi0KR8z5y3Fcq6jUOAGSN_aRlO9giMC9vzgqz18njxxxp4nDCuByfVQDTQdIGz-pKIpCJcTIhArlQz2lOXYj4eCRUJXS-T3N2Pv_0ae7jIIjfM668qQvMqxsAPrTRBXuh_Y_" />
+                        <div
+                            class="absolute inset-0 border border-transparent group-hover:border-border-low-light transition-colors duration-500 pointer-events-none">
+                        </div>
+                    </div>
+                    <div class="h-64 relative overflow-hidden group">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="Close up architectural detail of a luxurious kitchen featuring dark matte cabinetry, a massive seamless slab of black marble for the island, and thin champagne gold fixtures. Soft, diffused lighting creates a moody, sophisticated atmosphere."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJip6J-8xbe2tFblQFt5jWi2jjS_EMJeyo5Xk8zLzW9Ir52q30gJsfiCDK7A0s7qWH836DcfpozknmnSYR8SjdswkPDVZaJovf10dh10pn5P3zHB6t3Bmvzkk_5EwuGVMmOw_cVn5EIg8-g6edN5TWlDbpF-_qiBw2Ihrp5uBuWILRdZjhyfsEaTkJ6tjabfTpAb78Tr94wEwcqjfYGYUEQhmdy36x6ZHsPYZ-qc0qMQ08D7nIxwZ5" />
+                        <div
+                            class="absolute inset-0 border border-transparent group-hover:border-border-low-light transition-colors duration-500 pointer-events-none">
+                        </div>
+                    </div>
+                    <div class="h-64 relative overflow-hidden group">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                            data-alt="A pristine, minimalist infinity pool at dusk reflecting the deep blue sky and the stark silhouettes of distant desert mountains. The pool edge is dark stone, and the water is perfectly still. Subtle underwater lighting glows warmly."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKRFqJvnyTrCWSFJqPntWhfCXktAiBSjbGT5-1QoZzKjZGdw7Bi5GL275MQsVg9rgmPT-4wdqxIPiZ4iUOab5aEF4pfCHWCspASPV43rLpvOZwI1hHwS-s9x02VFqbuaiA8KQRQ23YsXy1d7MuggZda1AtZh77iVhnfXACR75sh0MZzBTuJoapjlHaMpnUK3paS-v2tsNpizoPNgAiuoy6q7_zvZy2oJTsYcqoCUH2e0584Wixkfd3" />
+                        <div
+                            class="absolute inset-0 border border-transparent group-hover:border-border-low-light transition-colors duration-500 pointer-events-none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Interactive & Forms -->
+            <div class="lg:col-span-4 flex flex-col gap-stack-lg">
+                <!-- Curated Amenities -->
+                <div class="bg-surface-container-low p-8 border border-muted-slate flex flex-col gap-6">
+                    <h3 class="font-headline-md text-headline-md text-stone-white mb-2">Curated Amenities</h3>
+                    <ul class="flex flex-col gap-4 font-body-md text-body-md text-on-surface-variant">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary mt-2 flex-shrink-0"></span>
+                            <span>Zero-edge Infinity Pool &amp; Spa</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary mt-2 flex-shrink-0"></span>
+                            <span>Organic Style Architectural Integration</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary mt-2 flex-shrink-0"></span>
+                            <span>Bespoke Wine Gallery (1,500 bottle capacity)</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary mt-2 flex-shrink-0"></span>
+                            <span>Automated Wellness Retreat</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2 h-2 bg-primary mt-2 flex-shrink-0"></span>
+                            <span>Collector's 8-Car Motor Court</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Schedule Tour Form -->
+                <div class="glass-panel p-8 flex flex-col gap-8 mt-4 sticky top-32">
+                    <div>
+                        <h3 class="font-headline-md text-headline-md text-stone-white mb-2">Schedule a Private Tour</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Inquire to arrange an exclusive
+                            viewing of Desert Mirage.</p>
+                    </div>
+                    <form class="flex flex-col gap-6">
+                        <input class="input-minimal w-full font-body-md" placeholder="Full Name" required=""
+                            type="text" />
+                        <input class="input-minimal w-full font-body-md" placeholder="Email Address" required=""
+                            type="email" />
+                        <input class="input-minimal w-full font-body-md" placeholder="Phone Number" type="tel" />
+                        <div class="mt-4">
+                            <button
+                                class="w-full bg-champagne-gold text-on-primary-fixed-variant font-label-caps text-label-caps px-6 py-4 uppercase tracking-[0.15em] transition-opacity hover:opacity-90 flex justify-center items-center gap-2"
+                                type="submit">
+                                Request Appointment
+                                <span class="material-symbols-outlined text-sm"
+                                    style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Interactive Floor Plan (Full Width Section) -->
+        <section
+            class="w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto border-t border-muted-slate">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg gap-4">
+                <h2
+                    class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-stone-white">
+                    Interactive Floor Plan</h2>
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-[0.15em]">Main
+                    Level</span>
+            </div>
+            <!-- Placeholder for interactive floor plan component -->
+            <div
+                class="w-full aspect-video bg-surface-container flex items-center justify-center border border-muted-slate relative overflow-hidden group cursor-crosshair">
+                <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-screen transition-opacity duration-500 group-hover:opacity-70"
+                    data-alt="A highly detailed, elegant architectural floor plan blueprint of a sprawling luxury estate, drawn with thin gold lines on a dark charcoal background. The layout shows expansive living areas, multiple suites, a large pool deck, and geometric precision. Minimalist and professional."
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKFphxS9J6JcPvHI8GsC048cUJRVI3Uxrba_2HFRLHSpilSMkdLOsIs3JBTgjXgri5kE-zbUz7Mx90rNyyAyYr3HosPFj8cmtiOMplE2fxNs-FLUT-M6-mGVQ63KU157OO4shwiV0lt1m2FyAbJw95uq8M9GrCA9DWI1YE6NdVfq8Da5wz5v_dfnvujeJb5YspTO3JIO5KIhp9nCEvPZfJl_D1TJktBc8F92SrJ6OO-FzQosiGslbg')">
+                </div>
+                <div
+                    class="relative z-10 flex flex-col items-center gap-4 text-center p-8 bg-surface/80 backdrop-blur-sm border border-border-low-light">
+                    <span class="material-symbols-outlined text-4xl text-primary"
+                        style="font-variation-settings: 'FILL' 0;">architecture</span>
+                    <p class="font-label-caps text-label-caps text-stone-white uppercase tracking-[0.15em]">Explore
+                        Layout</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal">
+        <div class="grid grid-cols-12 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+                <div class="font-display-lg text-headline-md text-primary mb-8">AURELIAN</div>
+                <p class="font-body-md text-on-surface-variant max-w-xs">
+                    Building architectural icons that stand as a testament to those who inhabit
+                    them.
+                </p>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="12.html.html">Process</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="contact.html.html">Inquiry</a>
+                </div>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">NAVIGATION</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="team.html.html">Our Legacy</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="about.html.html">Our Expertise</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="process.html.html">Clients Reviews</a>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-4">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h4>
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Privacy Policy</a>
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Terms</a>
+                </div>
+                <div class="mt-12">
+                    <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-50">
+                        © 2024
+                        AURELIAN BESPOKE HOMES. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+        <!-- Chat Window (Hidden by default, shown here for structure) -->
+        <div
+            class="hidden group-hover:flex flex-col w-80 h-96 bg-deep-charcoal border border-border-low-light shadow-2xl overflow-hidden transition-all duration-300">
+            <div
+                class="bg-surface-container-high p-4 border-b border-border-low-light flex justify-between items-center">
+                <h4 class="font-headline-md text-lg text-stone-white">Aurelian Concierge</h4>
+                <button class="text-on-surface-variant hover:text-primary">
+                    <span class="material-symbols-outlined text-sm">close</span>
+                </button>
+            </div>
+            <div class="flex-grow p-4 flex flex-col gap-4 overflow-y-auto">
+                <div class="bg-surface-container p-3 max-w-[80%] self-start">
+                    <p class="text-sm text-on-surface">Welcome to Aurelian. How may we assist you with your inquiry
+                        today?</p>
+                </div>
+            </div>
+            <div class="p-4 border-t border-border-low-light">
+                <input class="input-minimal w-full text-sm" placeholder="Type your message..." type="text" />
+            </div>
+        </div>
+        <!-- FAB and Label -->
+        <div class="flex items-center gap-3 group cursor-pointer">
+            <div
+                class="bg-stone-white px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="font-label-caps text-[10px] text-deep-charcoal uppercase tracking-widest">Inquire
+                    Now</span>
+            </div>
+            <div
+                class="w-14 h-14 bg-champagne-gold rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                <span class="material-symbols-outlined text-on-primary-fixed-variant">chat</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

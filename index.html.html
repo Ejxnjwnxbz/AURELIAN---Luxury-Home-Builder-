@@ -1,0 +1,564 @@
+<html class="dark" lang="en">
+
+<head></head>
+
+<body
+        class="bg-background text-on-surface font-sans antialiased overflow-x-hidden selection:bg-champagne-gold selection:text-deep-charcoal">
+
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>AURELIAN - Luxury Home Builder</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap"
+                rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+                rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        "colors": {
+                                                "champagne-gold": "#C5B358",
+                                                "surface-container": "#1f201e",
+                                                "primary-container": "#c5b358",
+                                                "on-tertiary": "#2f3032",
+                                                "surface-tint": "#dac769",
+                                                "on-primary-container": "#504500",
+                                                "on-error": "#690005",
+                                                "inverse-primary": "#6c5e06",
+                                                "inverse-on-surface": "#30312f",
+                                                "on-tertiary-fixed-variant": "#464749",
+                                                "tertiary-fixed": "#e3e2e4",
+                                                "surface-container-lowest": "#0e0e0d",
+                                                "on-background": "#e4e2df",
+                                                "secondary-fixed": "#e5e2e3",
+                                                "surface-dim": "#131412",
+                                                "surface": "#131412",
+                                                "primary-fixed": "#f7e382",
+                                                "on-tertiary-fixed": "#1a1c1d",
+                                                "primary": "#e2cf70",
+                                                "primary-fixed-dim": "#dac769",
+                                                "surface-container-highest": "#343533",
+                                                "on-secondary-fixed-variant": "#474647",
+                                                "on-surface-variant": "#cdc6b3",
+                                                "surface-container-low": "#1b1c1a",
+                                                "on-error-container": "#ffdad6",
+                                                "error-container": "#93000a",
+                                                "background": "#131412",
+                                                "outline": "#96917f",
+                                                "on-primary-fixed": "#211b00",
+                                                "secondary": "#c8c6c7",
+                                                "on-primary": "#393000",
+                                                "border-low-light": "rgba(197, 179, 88, 0.2)",
+                                                "on-secondary-container": "#bab8b9",
+                                                "muted-slate": "#2D2E30",
+                                                "outline-variant": "#4b4738",
+                                                "on-primary-fixed-variant": "#524700",
+                                                "tertiary-container": "#b3b2b4",
+                                                "surface-container-high": "#2a2a28",
+                                                "on-surface": "#e4e2df",
+                                                "on-secondary": "#303031",
+                                                "on-secondary-fixed": "#1b1b1c",
+                                                "error": "#ffb4ab",
+                                                "tertiary-fixed-dim": "#c7c6c8",
+                                                "surface-bright": "#393938",
+                                                "tertiary": "#ceced0",
+                                                "inverse-surface": "#e4e2df",
+                                                "surface-variant": "#343533",
+                                                "secondary-fixed-dim": "#c8c6c7",
+                                                "stone-white": "#F8F6F3",
+                                                "secondary-container": "#49494a",
+                                                "deep-charcoal": "#1A1A1B",
+                                                "on-tertiary-container": "#444547"
+                                        },
+                                        "borderRadius": {
+                                                "DEFAULT": "0.25rem",
+                                                "lg": "0.5rem",
+                                                "xl": "0.75rem",
+                                                "full": "9999px"
+                                        },
+                                        "spacing": {
+                                                "stack-md": "1.5rem",
+                                                "section-gap": "8rem",
+                                                "container-max": "1440px",
+                                                "margin-mobile": "1.5rem",
+                                                "margin-desktop": "5rem",
+                                                "gutter": "2rem",
+                                                "stack-sm": "0.5rem",
+                                                "stack-lg": "3rem"
+                                        },
+                                        "fontFamily": {
+                                                "display-lg": [
+                                                        "Playfair Display"
+                                                ],
+                                                "label-caps": [
+                                                        "Montserrat"
+                                                ],
+                                                "nav-item": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-xl": [
+                                                        "Playfair Display"
+                                                ],
+                                                "display-lg-mobile": [
+                                                        "Playfair Display"
+                                                ],
+                                                "headline-md": [
+                                                        "Playfair Display"
+                                                ],
+                                                "body-lg": [
+                                                        "Montserrat"
+                                                ],
+                                                "body-md": [
+                                                        "Montserrat"
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "Playfair Display"
+                                                ]
+                                        },
+                                        "fontSize": {
+                                                "display-lg": [
+                                                        "72px",
+                                                        {
+                                                                "lineHeight": "84px",
+                                                                "letterSpacing": "-0.02em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "label-caps": [
+                                                        "12px",
+                                                        {
+                                                                "lineHeight": "16px",
+                                                                "letterSpacing": "0.15em",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "nav-item": [
+                                                        "14px",
+                                                        {
+                                                                "lineHeight": "20px",
+                                                                "letterSpacing": "0.05em",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "headline-xl": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ],
+                                                "display-lg-mobile": [
+                                                        "48px",
+                                                        {
+                                                                "lineHeight": "56px",
+                                                                "fontWeight": "700"
+                                                        }
+                                                ],
+                                                "headline-md": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "500"
+                                                        }
+                                                ],
+                                                "body-lg": [
+                                                        "18px",
+                                                        {
+                                                                "lineHeight": "32px",
+                                                                "letterSpacing": "0.01em",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "body-md": [
+                                                        "16px",
+                                                        {
+                                                                "lineHeight": "28px",
+                                                                "fontWeight": "400"
+                                                        }
+                                                ],
+                                                "headline-xl-mobile": [
+                                                        "32px",
+                                                        {
+                                                                "lineHeight": "40px",
+                                                                "fontWeight": "600"
+                                                        }
+                                                ]
+                                        }
+                                },
+                        },
+                }
+        </script>
+        <style>
+                .nav-transition {
+                        transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+                }
+
+                .scrolled-nav {
+                        background-color: #1A1A1B !important;
+                        border-bottom: 1px solid rgba(197, 179, 88, 0.2) !important;
+                }
+
+                @keyframes soundWave {
+                        0% {
+                                height: 4px;
+                        }
+
+                        50% {
+                                height: 16px;
+                        }
+
+                        100% {
+                                height: 4px;
+                        }
+                }
+
+                .sound-bar {
+                        animation: soundWave 1s ease-in-out infinite;
+                }
+
+                .sound-bar:nth-child(2) {
+                        animation-delay: 0.2s;
+                }
+
+                .sound-bar:nth-child(3) {
+                        animation-delay: 0.4s;
+                }
+        </style>
+        <!-- TopNavBar -->
+        <nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-500 ease-in-out nav-transition"
+                id="top-nav">
+                <div
+                        class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+                        <a class="font-display-lg text-headline-md tracking-tighter text-on-surface"
+                                href="#">AURELIAN</a>
+                        <div class="hidden md:flex items-center space-x-gutter">
+                                <a class="font-nav-item text-nav-item text-primary border-b border-primary pb-1"
+                                        href="index.html.html">Home</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="portfolio.html.html">Gallery</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="property details.html.html">Available Homes</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="12.html.html">Our Process</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="contact.html.html">Inquiry</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="studio.html.html">Our Team</a>
+                                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                                        href="testimonials.html.html">Studio</a>
+                        </div>
+                        <div class="hidden md:flex items-center gap-6">
+                                <!-- Audio Indicator -->
+                                <div class="flex items-center gap-2 opacity-0 transition-opacity duration-500"
+                                        id="audio-status">
+                                        <span
+                                                class="font-label-caps text-[10px] text-on-surface-variant tracking-widest uppercase">Audio
+                                                Active</span>
+                                        <div class="flex items-end gap-0.5 h-4">
+                                                <div class="sound-bar w-0.5 bg-champagne-gold"></div>
+                                                <div class="sound-bar w-0.5 bg-champagne-gold"></div>
+                                                <div class="sound-bar w-0.5 bg-champagne-gold"></div>
+                                        </div>
+                                </div>
+                                <a class="bg-champagne-gold text-deep-charcoal font-label-caps text-label-caps px-6 py-3 hover:bg-stone-white transition-colors duration-300 uppercase"
+                                        href="contact.html.html">Start Your Build</a>
+                        </div>
+                        <button class="md:hidden text-on-surface">
+                                <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 0;">menu</span>
+                        </button>
+                </div>
+        </nav>
+        <!-- Hero Section -->
+        <section class="relative h-screen w-full flex items-center justify-center">
+                <div class="absolute inset-0 z-0">
+                        <div class="w-full h-full bg-cover bg-center"
+                                data-alt="A breathtaking, cinematic shot of a modern luxury estate at twilight. The architecture features vast glass walls, minimalist concrete planes, and warm interior lighting spilling out onto an infinity pool. The sky is a deep, moody indigo, contrasting perfectly with the champagne gold interior glow. High-end, architectural photography style."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCyox7eDu6sMPVke-RbN1vwsvM4Wri1BSk2Lm3mQZ5N6EYGIv5M3Bkz4u9equmvnX9TDnzIzs1_ySHRZyypgaKLQIa8rag08m-ECPXbDC9oXTp5SpI6xk2AY5QLb2Dy2rIv1mfGK0LsoKgMEw5PuBT8dfUy6QV96Pm-AucYezLVEZMJ9kfy_TQ3sVgrqv-aeZejPgEs1d7U0V2P_tXI_QXIRadWBdMwIA88LecK7lPyKMbg1WNwf2I2')">
+                        </div>
+                        <div class="absolute inset-0 bg-deep-charcoal/60 mix-blend-multiply"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent">
+                        </div>
+                </div>
+                <div class="relative z-10 text-center px-margin-mobile md:px-margin-desktop mt-20">
+                        <h1
+                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-stone-white mb-stack-md opacity-0 animate-[fadeInUp_1s_ease-out_forwards]">
+                                The Art of Living, Perfected.</h1>
+                        <p
+                                class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-2xl mx-auto opacity-0 animate-[fadeInUp_1s_ease-out_0.3s_forwards]">
+                                Bespoke architectural masterpieces crafted for the discerning few.</p>
+                        <a class="inline-block bg-champagne-gold text-deep-charcoal font-label-caps text-label-caps px-8 py-4 hover:bg-stone-white transition-colors duration-300 uppercase opacity-0 animate-[fadeInUp_1s_ease-out_0.6s_forwards]"
+                                href="about.html.html">Explore the Portfolio</a>
+                </div>
+        </section>
+        <!-- Section 1: The Aurelian Standard -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                        <div class="md:col-span-5 relative">
+                                <div class="aspect-[4/5] bg-cover bg-center rounded-sm"
+                                        data-alt="A close-up, abstract architectural detail shot of a luxury home. Showing the intersection of textured natural stone, dark sleek metal trim, and warm, soft indirect cove lighting. The aesthetic is extremely minimalist, focusing on raw materials and precise craftsmanship. Dark mode palette with subtle golden light accents."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCJ7jVWWguiUSIOJY-z3W29oL5aZyZpQruructRxynY-p4YNPuIG2cApCOCUwXWZeQOwQgMjJ9PHH8A-TXZv-KE2WtDbpuZGu0qvj8Itn1MIucD9DPnzqWuAKgENV7XJHRs3uPX8HsQlKo-s35hb6zn6WycHmC8bI8sw3MdSPQOgP8JgoVNn3q8UhIFl8uuiutE70-zx2jczgPf8Rcxw5Hj3qsiIVt9Eedr1FZvHy2Bf7ssA3NAHUOG')">
+                                </div>
+                                <div
+                                        class="absolute -bottom-10 -right-10 w-48 h-48 border border-champagne-gold/20 -z-10 hidden md:block">
+                                </div>
+                        </div>
+                        <div class="md:col-span-6 md:col-start-7 pt-10 md:pt-0">
+                                <span
+                                        class="font-label-caps text-label-caps text-champagne-gold tracking-[0.2em] mb-stack-sm block uppercase">The
+                                        Aurelian Standard</span>
+                                <h2
+                                        class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-stone-white mb-stack-md">
+                                        Craftsmanship Without Compromise.</h2>
+                                <div class="h-px w-16 bg-champagne-gold mb-stack-md"></div>
+                                <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                                        Building a legacy home should be an exhilarating journey, not a daunting task.
+                                        At Aurelian, we elevate the design-build experience to an art form. Every space
+                                        we conceive is a deliberate study in proportion, light, and material purity. We
+                                        do not simply construct houses; we sculpt environments that resonate with the
+                                        profound quietude of true luxury.
+                                </p>
+                        </div>
+                </div>
+        </section>
+        <!-- Section 2: Our Services -->
+        <section class="py-section-gap bg-surface px-margin-mobile md:px-margin-desktop relative">
+                <div class="max-w-container-max mx-auto">
+                        <div class="text-center mb-16">
+                                <h2
+                                        class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-stone-white mb-stack-sm">
+                                        Our Expertise</h2>
+                                <p class="font-body-md text-body-md text-on-surface-variant">Comprehensive mastery from
+                                        conception to curation.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                <!-- Service 1 -->
+                                <div
+                                        class="group bg-muted-slate p-8 hover:bg-surface-container-high transition-colors duration-500 border border-transparent hover:border-champagne-gold/20 flex flex-col items-start h-full">
+                                        <span class="material-symbols-outlined text-champagne-gold text-4xl mb-6"
+                                                style="font-variation-settings: 'FILL' 0;">architecture</span>
+                                        <h3 class="font-headline-md text-headline-md text-stone-white mb-4">Design &amp;
+                                                Build</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">A
+                                                seamless integration of visionary architectural design and meticulous
+                                                construction execution, ensuring the original concept is realized
+                                                flawlessly.</p>
+                                        <a class="font-label-caps text-label-caps text-champagne-gold uppercase tracking-wider group-hover:text-stone-white transition-colors flex items-center gap-2"
+                                                href="#">Discover <span
+                                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                                </div>
+                                <!-- Service 2 -->
+                                <div
+                                        class="group bg-muted-slate p-8 hover:bg-surface-container-high transition-colors duration-500 border border-transparent hover:border-champagne-gold/20 flex flex-col items-start h-full">
+                                        <span class="material-symbols-outlined text-champagne-gold text-4xl mb-6"
+                                                style="font-variation-settings: 'FILL' 0;">foundation</span>
+                                        <h3 class="font-headline-md text-headline-md text-stone-white mb-4">Renovations
+                                        </h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                                                Transforming existing structures into modern masterpieces while honoring
+                                                their foundational character with our exacting standards.</p>
+                                        <a class="font-label-caps text-label-caps text-champagne-gold uppercase tracking-wider group-hover:text-stone-white transition-colors flex items-center gap-2"
+                                                href="AvailableHomes.html.html">Discover <span
+                                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                                </div>
+                                <!-- Service 3 -->
+                                <div
+                                        class="group bg-muted-slate p-8 hover:bg-surface-container-high transition-colors duration-500 border border-transparent hover:border-champagne-gold/20 flex flex-col items-start h-full">
+                                        <span class="material-symbols-outlined text-champagne-gold text-4xl mb-6"
+                                                style="font-variation-settings: 'FILL' 0;">key</span>
+                                        <h3 class="font-headline-md text-headline-md text-stone-white mb-4">Home
+                                                Management</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                                                Exclusive, white-glove estate curation. Ensuring your Aurelian home
+                                                operates perfectly, preserving its value and your peace of mind.</p>
+                                        <a class="font-label-caps text-label-caps text-champagne-gold uppercase tracking-wider group-hover:text-stone-white transition-colors flex items-center gap-2"
+                                                href="index.html.html">Discover <span
+                                                        class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Footer -->
+        <footer class="bg-deep-charcoal">
+                <div class="grid grid-cols-12 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+                        <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+                                <div class="font-display-lg text-headline-md text-primary mb-8">AURELIAN</div>
+                                <p class="font-body-md text-on-surface-variant max-w-xs">
+                                        Building architectural icons that stand as a testament to those who inhabit
+                                        them.
+                                </p>
+
+                                <div class="flex gap-6">
+                                        <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                href="https://www.instagram.com/"><span
+                                                        class="font-label-caps text-label-caps">INSTAGRAM</span></a>
+                                        <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#"><span
+                                                        class="font-label-caps text-label-caps">LINKEDIN</span></a>
+                                        <a class="text-on-surface-variant hover:text-primary transition-colors"
+                                                href="#"><span class="font-label-caps text-label-caps">VIMEO</span></a>
+                                </div>
+                        </div>
+                        <div class="col-span-6 md:col-span-2">
+                                <h4 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h4>
+                                <div class="flex flex-col gap-4">
+                                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                                href="12.html.html">Process</a>
+                                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                                href="contact.html.html">Inquiry</a>
+                                </div>
+                        </div>
+                        <div class="col-span-6 md:col-span-2">
+                                <h4 class="font-label-caps text-label-caps text-primary mb-6">NAVIGATION</h4>
+                                <div class="flex flex-col gap-4">
+                                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                                href="team.html.html">Our Legacy</a>
+                                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                                href="about.html.html">Our Expertise</a>
+                                        <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                                href="process.html.html">Clients Reviews</a>
+                                </div>
+                        </div>
+                        <div class="col-span-12 md:col-span-4">
+                                <h4 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h4>
+                                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                                        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                                href="privacy.html.html">Privacy Policy</a>
+                                        <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                                                href="privacy.html.html">Terms</a>
+                                </div>
+                                <div class="mt-12">
+                                        <p
+                                                class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-50">
+                                                © 2024
+                                                AURELIAN BESPOKE HOMES. ALL RIGHTS RESERVED.</p>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+        <style>
+                @keyframes fadeInUp {
+                        from {
+                                opacity: 0;
+                                transform: translateY(20px);
+                        }
+
+                        to {
+                                opacity: 1;
+                                transform: translateY(0);
+                        }
+                }
+        </style>
+        <script>
+                // Simple scroll handler for TopNav
+                const nav = document.getElementById('top-nav');
+                window.addEventListener('scroll', () => {
+                        if (window.scrollY > 50) {
+                                nav.classList.add('scrolled-nav');
+                                nav.classList.remove('bg-transparent');
+                        } else {
+                                nav.classList.remove('scrolled-nav');
+                                nav.classList.add('bg-transparent');
+                        }
+                });
+
+                // Audio Experience Logic
+                (function () {
+                        let hasPlayed = sessionStorage.getItem('aurelian_welcome_played') === 'true';
+
+                        const playWelcome = () => {
+                                if (hasPlayed) return;
+
+                                const synth = window.speechSynthesis;
+                                const utterThis = new SpeechSynthesisUtterance("Welcome to Aurelian");
+
+                                // Select a refined voice
+                                const voices = synth.getVoices();
+                                // Prefer high-quality English voices
+                                const preferredVoice = voices.find(v => v.name.includes('Premium') || v.name.includes('Enhanced') || v.name.includes('Daniel') || v.name.includes('Samantha')) || voices[0];
+
+                                if (preferredVoice) utterThis.voice = preferredVoice;
+                                utterThis.rate = 0.85; // Slightly slower for luxury feel
+                                utterThis.pitch = 0.95; // Slightly deeper
+                                utterThis.volume = 0.6; // Subtle
+
+                                utterThis.onstart = () => {
+                                        const indicator = document.getElementById('audio-status');
+                                        if (indicator) indicator.classList.remove('opacity-0');
+                                };
+
+                                utterThis.onend = () => {
+                                        setTimeout(() => {
+                                                const indicator = document.getElementById('audio-status');
+                                                if (indicator) indicator.classList.add('opacity-0');
+                                        }, 3000);
+                                };
+
+                                synth.speak(utterThis);
+                                hasPlayed = true;
+                                sessionStorage.setItem('aurelian_welcome_played', 'true');
+
+                                // Remove listeners after first interaction
+                                window.removeEventListener('click', playWelcome);
+                                window.removeEventListener('scroll', playWelcome);
+                                window.removeEventListener('keydown', playWelcome);
+                        };
+
+                        // Modern browsers require interaction. We listen for common ones.
+                        window.addEventListener('click', playWelcome);
+                        window.addEventListener('scroll', playWelcome, { passive: true });
+                        window.addEventListener('keydown', playWelcome);
+
+                        // Populate voices (some browsers need this event)
+                        if (speechSynthesis.onvoiceschanged !== undefined) {
+                                speechSynthesis.onvoiceschanged = () => synth.getVoices();
+                        }
+                })();
+        </script>
+        <div class="fixed bottom-8 right-8 z-[100] flex flex-col items-end gap-4">
+                <!-- Chat Window (Hidden by default) -->
+                <div class="hidden w-80 md:w-96 bg-deep-charcoal border border-champagne-gold/20 rounded-lg shadow-2xl overflow-hidden flex flex-col animate-[fadeInUp_0.3s_ease-out]"
+                        id="chat-window">
+                        <div
+                                class="bg-surface-container-high p-4 border-b border-champagne-gold/20 flex justify-between items-center">
+                                <h4 class="font-display-lg text-lg text-stone-white">Aurelian Concierge</h4>
+                                <button class="text-on-surface-variant hover:text-champagne-gold transition-colors"
+                                        onclick="document.getElementById('chat-window').classList.add('hidden')">
+                                        <span class="material-symbols-outlined">close</span>
+                                </button>
+                        </div>
+                        <div class="h-64 p-4 overflow-y-auto flex flex-col gap-4">
+                                <div class="bg-muted-slate p-3 rounded-sm max-w-[80%]">
+                                        <p class="font-body-md text-sm text-on-surface">Welcome to Aurelian. How may we
+                                                assist your architectural journey today?</p>
+                                </div>
+                        </div>
+                        <div class="p-4 border-t border-champagne-gold/20 bg-surface">
+                                <div class="flex gap-2">
+                                        <input class="flex-grow bg-deep-charcoal border border-surface-container-highest text-on-surface text-sm px-3 py-2 focus:outline-none focus:border-champagne-gold transition-colors"
+                                                placeholder="Type your message..." type="text" />
+                                        <button
+                                                class="bg-champagne-gold text-deep-charcoal p-2 hover:bg-stone-white transition-colors">
+                                                <span class="material-symbols-outlined">send</span>
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+                <!-- FAB and Label -->
+                <div class="flex items-center gap-3 group cursor-pointer"
+                        onclick="document.getElementById('chat-window').classList.toggle('hidden')">
+                        <div
+                                class="bg-stone-white text-deep-charcoal px-4 py-2 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+                                <span class="font-label-caps text-[10px] uppercase tracking-widest">Inquire Now</span>
+                        </div>
+                        <button
+                                class="w-14 h-14 bg-champagne-gold rounded-full flex items-center justify-center shadow-lg hover:bg-stone-white transition-all duration-300 transform hover:scale-110">
+                                <span class="material-symbols-outlined text-deep-charcoal text-2xl">chat</span>
+                        </button>
+                </div>
+        </div>```
+</body>
+
+</html>

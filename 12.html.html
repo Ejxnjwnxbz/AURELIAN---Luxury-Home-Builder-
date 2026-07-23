@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Our Process | AURELIAN</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "champagne-gold": "#C5B358",
+                        "surface-container": "#1f201e",
+                        "primary-container": "#c5b358",
+                        "on-tertiary": "#2f3032",
+                        "surface-tint": "#dac769",
+                        "on-primary-container": "#504500",
+                        "on-error": "#690005",
+                        "inverse-primary": "#6c5e06",
+                        "inverse-on-surface": "#30312f",
+                        "on-tertiary-fixed-variant": "#464749",
+                        "tertiary-fixed": "#e3e2e4",
+                        "surface-container-lowest": "#0e0e0d",
+                        "on-background": "#e4e2df",
+                        "secondary-fixed": "#e5e2e3",
+                        "surface-dim": "#131412",
+                        "surface": "#131412",
+                        "primary-fixed": "#f7e382",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "primary": "#e2cf70",
+                        "primary-fixed-dim": "#dac769",
+                        "surface-container-highest": "#343533",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-surface-variant": "#cdc6b3",
+                        "surface-container-low": "#1b1c1a",
+                        "on-error-container": "#ffdad6",
+                        "error-container": "#93000a",
+                        "background": "#131412",
+                        "outline": "#96917f",
+                        "on-primary-fixed": "#211b00",
+                        "secondary": "#c8c6c7",
+                        "on-primary": "#393000",
+                        "border-low-light": "rgba(197, 179, 88, 0.2)",
+                        "on-secondary-container": "#bab8b9",
+                        "muted-slate": "#2D2E30",
+                        "outline-variant": "#4b4738",
+                        "on-primary-fixed-variant": "#524700",
+                        "tertiary-container": "#b3b2b4",
+                        "surface-container-high": "#2a2a28",
+                        "on-surface": "#e4e2df",
+                        "on-secondary": "#303031",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed-dim": "#c7c6c8",
+                        "surface-bright": "#393938",
+                        "tertiary": "#ceced0",
+                        "inverse-surface": "#e4e2df",
+                        "surface-variant": "#343533",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "stone-white": "#F8F6F3",
+                        "secondary-container": "#49494a",
+                        "deep-charcoal": "#1A1A1B",
+                        "on-tertiary-container": "#444547"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-md": "1.5rem",
+                        "section-gap": "8rem",
+                        "container-max": "1440px",
+                        "margin-mobile": "1.5rem",
+                        "margin-desktop": "5rem",
+                        "gutter": "2rem",
+                        "stack-sm": "0.5rem",
+                        "stack-lg": "3rem"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "nav-item": ["Montserrat"],
+                        "headline-xl": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-xl-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "nav-item": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .nav-scrolled {
+            background-color: #1A1A1B;
+            border-bottom: 1px solid rgba(197, 179, 88, 0.2);
+        }
+
+        .timeline-line {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #C5B358, transparent);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col selection:bg-champagne-gold selection:text-deep-charcoal">
+    <!-- TopNavBar -->
+    <header
+        class="docked full-width top-0 sticky z-50 bg-transparent dark:bg-transparent transition-all duration-500 ease-in-out"
+        id="top-nav">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+            <a class="font-display-lg text-headline-md tracking-tighter text-on-surface" href="/">AURELIAN</a>
+            <nav class="hidden md:flex gap-8 items-center">
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="index.html.html">Home</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="portfolio.html.html">Gallery</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="property details.html.html">Available Homes</a>
+                <a class="font-nav-item text-nav-item text-primary border-b border-primary pb-1 transition-all duration-300"
+                    href="12.html.html">Our Process</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="contact.html.html">Inquire</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors transition-all duration-300"
+                    href="studio.html.html">Our Teams</a>
+                <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-all duration-300"
+                    href="testimonials.html.html">Studio</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a class="bg-champagne-gold text-deep-charcoal font-label-caps text-label-caps px-6 py-3 hover:bg-stone-white transition-colors duration-300 uppercase"
+                    href="contact.html.html">Start Your Build</a>
+                <button class="md:hidden text-on-surface">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow">
+        <!-- Header Section -->
+        <section class="relative pt-32 pb-16 md:pt-48 md:pb-24 px-margin-mobile md:px-margin-desktop text-center">
+            <div class="max-w-4xl mx-auto space-y-stack-md">
+                <p class="font-label-caps text-label-caps text-champagne-gold uppercase tracking-widest">Our Methodology
+                </p>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg">A
+                    Meticulous Journey</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-8">
+                    Building an Aurelian home is an exercise in precision and partnership. We guide you through every
+                    phase with unwavering attention to detail.
+                </p>
+            </div>
+        </section>
+        <!-- Timeline Section -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop relative">
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Central Timeline Line (Desktop) -->
+                <div
+                    class="hidden md:block absolute left-1/2 top-0 bottom-0 timeline-line transform -translate-x-1/2 opacity-30">
+                </div>
+                <div class="space-y-24 md:space-y-48">
+                    <!-- Step 01 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right md:pr-12 order-2 md:order-1 mt-8 md:mt-0">
+                            <h3
+                                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-4 text-champagne-gold">
+                                Initial Consultation</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">We begin by understanding your
+                                vision, lifestyle, and aesthetic preferences. This dialogue forms the foundational
+                                blueprint for your bespoke estate.</p>
+                        </div>
+                        <div
+                            class="md:absolute left-1/2 transform md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-deep-charcoal border border-border-low-light z-10 order-1 md:order-2">
+                            <span
+                                class="font-display-lg text-headline-md text-on-surface group-hover:text-champagne-gold transition-colors duration-300">01</span>
+                        </div>
+                        <div class="md:w-5/12 order-3">
+                            <div class="aspect-[4/3] w-full relative bg-muted-slate rounded-lg overflow-hidden group-hover:border group-hover:border-champagne-gold/30 transition-all duration-500"
+                                data-alt="A luxury architect's studio at night, warm ambient lighting, blueprints on a dark oak table, a steaming cup of coffee, minimal modern aesthetic, dark corporate tone."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAW6tbBgIF4q1DL3gQv-yVrvKO0hbFmoiXgYzEtDcaiNMV2TueMLCxtUygpwXZtyuPtElSYA2uPb5A69Qn-Ylt0x4sihCpr5yfHdiOL-_poWntcDy8wkq76KnqaaPLUJ2KEoM592iqSg0S18kHgqtQltzHwcV9En8_XAedD3fCXMg1kt0MrK8h5yH1VblBl9o791PCgWtHv4j5tG02HFHH7t-sA9HrwmGzre66ZPOIeWZHbm0iD6FnY')">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 02 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 order-3 md:order-1">
+                            <div class="aspect-[4/3] w-full relative bg-muted-slate rounded-lg overflow-hidden group-hover:border group-hover:border-champagne-gold/30 transition-all duration-500"
+                                data-alt="A hyper-realistic architectural rendering of a modern luxury home exterior at dusk, dark charcoal facade, warm interior lighting glowing through large glass windows, minimalist landscaping."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIhUej33oh40jkDrSasFIcbcQjkERIm4ROW4yxpxqgG0MOoi3xHr8OdZohbGfsOcJzzYK9W4DThU_yODZAiiyEYAhNObGOVHUcgqOYlAQC74_3RVja121aoraJE4svfyVf7-bIsSRUGj7fWEBOthi5KXKFSxM-ENUe2iFJpR3h7WQuEPoJ97fEGtA0QROij5aaq0kDv5QuCIBUuf4MBXPMZ42UnXvhCTIbPizWZeOUUaxbfbN-HS8Y')">
+                            </div>
+                        </div>
+                        <div
+                            class="md:absolute left-1/2 transform md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-deep-charcoal border border-border-low-light z-10 order-1 md:order-2 mt-8 md:mt-0 mb-8 md:mb-0">
+                            <span
+                                class="font-display-lg text-headline-md text-on-surface group-hover:text-champagne-gold transition-colors duration-300">02</span>
+                        </div>
+                        <div class="md:w-5/12 text-center md:text-left md:pl-12 order-2 md:order-3">
+                            <h3
+                                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-4 text-champagne-gold">
+                                Design &amp; Architecture</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Our master architects translate
+                                your vision into precise schematic designs, focusing on spatial harmony, material
+                                selection, and structural integrity.</p>
+                        </div>
+                    </div>
+                    <!-- Step 03 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right md:pr-12 order-2 md:order-1 mt-8 md:mt-0">
+                            <h3
+                                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-4 text-champagne-gold">
+                                Craftsmanship</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">The physical manifestation
+                                begins. Our select artisans and builders execute the plans with obsessive precision,
+                                using only the finest sourced materials.</p>
+                        </div>
+                        <div
+                            class="md:absolute left-1/2 transform md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-deep-charcoal border border-border-low-light z-10 order-1 md:order-2">
+                            <span
+                                class="font-display-lg text-headline-md text-on-surface group-hover:text-champagne-gold transition-colors duration-300">03</span>
+                        </div>
+                        <div class="md:w-5/12 order-3">
+                            <div class="aspect-[4/3] w-full relative bg-muted-slate rounded-lg overflow-hidden group-hover:border group-hover:border-champagne-gold/30 transition-all duration-500"
+                                data-alt="Close up of a skilled artisan's hands smoothing a dark polished stone surface in a dimly lit workshop, sparks of light reflecting off a gold inlay, moody atmospheric photography."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCGKIYhN2HmW7w82LITk0BTwCCmDAjSJSAdcXgi4PqrmYsGFMUEu9cugLE6_9LZH04tN2AoI6FUp9nIJ4mUbYe8JKzVWYOTgw5OYOcW688IWOY-udmYeo_vX7YKujBJlrTzD9G87kT_mb5FltGgKhJP0jHgdKkP7TXaRnCIEr8cp5qP-yly_GCYLqFAEeq7RhrXEuo-0uZMSSYP5J-g0-6fMhchJrXgFE3XVa32rlYkE1i07xNUjgsL')">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 04 -->
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 order-3 md:order-1">
+                            <div class="aspect-[4/3] w-full relative bg-muted-slate rounded-lg overflow-hidden group-hover:border group-hover:border-champagne-gold/30 transition-all duration-500"
+                                data-alt="The grand entrance of a completed luxury home at night, double-height dark wood doors, warm inviting interior light spilling onto a manicured stone pathway, ultimate prestige and mystery."
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBt9JXQQ2axkMOOMaEJFErXphSkizLlNBZzP1P8KOZEkzq-kxjOCIdRZcIFIwm_B_6axXc4Hw6y5hD-C1PvODXtrf2GPSX6rgwA_VbfWcy9m1a4E2qtg1pq_968ltkOuMf9J5N8PIYFqkUt-m2Jc1HjyKqripRWJ5WYhNfRA_9B723UzL6_GRmW0ZMVytoiF6vbya6jsOcrMzCxK1sBX-pUFGP4CHPsE1kICwr5nwlrmvShqU3T0xGy')">
+                            </div>
+                        </div>
+                        <div
+                            class="md:absolute left-1/2 transform md:-translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-deep-charcoal border border-border-low-light z-10 order-1 md:order-2 mt-8 md:mt-0 mb-8 md:mb-0">
+                            <span
+                                class="font-display-lg text-headline-md text-on-surface group-hover:text-champagne-gold transition-colors duration-300">04</span>
+                        </div>
+                        <div class="md:w-5/12 text-center md:text-left md:pl-12 order-2 md:order-3">
+                            <h3
+                                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-4 text-champagne-gold">
+                                The Grand Opening</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant">The culmination of our journey.
+                                A private unveiling of your bespoke residence, thoroughly inspected and ready for a
+                                lifetime of memories.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action Section -->
+        <section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest text-center">
+            <div class="max-w-2xl mx-auto space-y-8">
+                <h2
+                    class="font-display-lg-mobile md:font-display-lg text-headline-xl-mobile md:text-headline-xl text-on-surface">
+                    Ready to Begin?</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant">Take the first step toward realizing your
+                    bespoke architectural masterpiece.</p>
+                <div class="pt-4">
+                    <a class="inline-flex bg-champagne-gold text-deep-charcoal font-label-caps text-label-caps px-8 py-4 uppercase tracking-widest hover:bg-white transition-colors duration-300"
+                        href="contact.html.html">
+                        Start Your Journey
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal">
+        <div class="grid grid-cols-12 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+                <div class="font-display-lg text-headline-md text-primary mb-8">AURELIAN</div>
+                <p class="font-body-md text-on-surface-variant max-w-xs">
+                    Building architectural icons that stand as a testament to those who inhabit them.
+                </p>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="12.html.html">Process</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="contact.html.html">Inquiry</a>
+                </div>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">NAVIGATION</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="team.html.html">Our Legacy</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="about.html.html">Our Expertise</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="process.html.html">Clients Reviews</a>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-4">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h4>
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Privacy Policy</a>
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Terms</a>
+                </div>
+                <div class="mt-12">
+                    <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-50">© 2024
+                        AURELIAN BESPOKE HOMES. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple scroll effect for TopNavBar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+                nav.classList.remove('bg-transparent');
+            } else {
+                nav.classList.remove('nav-scrolled');
+                nav.classList.add('bg-transparent');
+            }
+        });
+    </script>
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+        <!-- Chat Window (Hidden by default, but structure provided for 'docked' look) -->
+        <div class="hidden w-80 bg-deep-charcoal border border-border-low-light rounded-lg shadow-2xl overflow-hidden flex flex-col mb-4 transition-all duration-300"
+            id="chat-window">
+            <div
+                class="bg-surface-container-highest p-4 border-b border-border-low-light flex justify-between items-center">
+                <h4 class="font-display-lg text-body-lg text-champagne-gold">Aurelian Concierge</h4>
+                <button class="text-on-surface-variant hover:text-white"
+                    onclick="document.getElementById('chat-window').classList.add('hidden')">
+                    <span class="material-symbols-outlined text-body-md">close</span>
+                </button>
+            </div>
+            <div class="h-64 p-4 overflow-y-auto space-y-4">
+                <div class="bg-muted-slate p-3 rounded-lg max-w-[80%]">
+                    <p class="text-body-md text-on-surface">Welcome to Aurelian. How may we assist you in your journey
+                        today?</p>
+                </div>
+            </div>
+            <div class="p-4 border-t border-border-low-light">
+                <div class="relative">
+                    <input
+                        class="w-full bg-surface-container-low border border-border-low-light rounded-full px-4 py-2 text-body-md focus:outline-none focus:border-champagne-gold transition-colors"
+                        placeholder="Type your message..." type="text" />
+                </div>
+            </div>
+        </div>
+        <!-- FAB and Label -->
+        <div class="flex items-center gap-3 group cursor-pointer"
+            onclick="document.getElementById('chat-window').classList.toggle('hidden')">
+            <div
+                class="bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="font-label-caps text-[10px] text-white uppercase tracking-widest">Inquire Now</span>
+            </div>
+            <button
+                class="w-16 h-16 bg-champagne-gold rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300">
+                <span class="material-symbols-outlined text-deep-charcoal text-headline-md">chat</span>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

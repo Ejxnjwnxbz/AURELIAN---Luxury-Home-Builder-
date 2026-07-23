@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #C5B358 0%, #F7E382 50%, #C5B358 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #131412;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #C5B358;
+        }
+
+        .glass-panel {
+            background: rgba(45, 46, 48, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#dac769",
+                        "surface-container": "#1f201e",
+                        "tertiary-fixed": "#e3e2e4",
+                        "secondary-container": "#49494a",
+                        "on-primary-fixed-variant": "#524700",
+                        "tertiary-container": "#b3b2b4",
+                        "surface-variant": "#343533",
+                        "tertiary": "#ceced0",
+                        "primary-fixed": "#f7e382",
+                        "on-primary": "#393000",
+                        "on-surface": "#e4e2df",
+                        "secondary": "#c8c6c7",
+                        "champagne-gold": "#C5B358",
+                        "on-background": "#e4e2df",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-container": "#bab8b9",
+                        "deep-charcoal": "#1A1A1B",
+                        "border-low-light": "rgba(197, 179, 88, 0.2)",
+                        "muted-slate": "#2D2E30",
+                        "surface": "#131412",
+                        "inverse-surface": "#e4e2df",
+                        "on-primary-container": "#504500",
+                        "surface-container-high": "#2a2a28",
+                        "on-tertiary": "#2f3032",
+                        "surface-bright": "#393938",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "outline-variant": "#4b4738",
+                        "on-surface-variant": "#cdc6b3",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "surface-dim": "#131412",
+                        "primary": "#e2cf70",
+                        "surface-container-lowest": "#0e0e0d",
+                        "inverse-on-surface": "#30312f",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "on-secondary-fixed-variant": "#474647",
+                        "secondary-fixed": "#e5e2e3",
+                        "tertiary-fixed-dim": "#c7c6c8",
+                        "on-tertiary-container": "#444547",
+                        "surface-container-highest": "#343533",
+                        "background": "#131412",
+                        "stone-white": "#F8F6F3",
+                        "primary-container": "#c5b358",
+                        "outline": "#96917f",
+                        "error": "#ffb4ab",
+                        "on-tertiary-fixed-variant": "#464749",
+                        "inverse-primary": "#6c5e06",
+                        "primary-fixed-dim": "#dac769",
+                        "on-secondary": "#303031",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1b1c1a",
+                        "on-primary-fixed": "#211b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "3rem",
+                        "stack-md": "1.5rem",
+                        "margin-mobile": "1.5rem",
+                        "gutter": "2rem",
+                        "margin-desktop": "5rem",
+                        "stack-sm": "0.5rem",
+                        "section-gap": "8rem",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-xl-mobile": ["Playfair Display"],
+                        "headline-xl": ["Playfair Display"],
+                        "nav-item": ["Montserrat"],
+                        "label-caps": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", { "lineHeight": "56px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "nav-item": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-champagne-gold selection:text-deep-charcoal">
+    <!-- TopNavBar -->
+    <nav class="bg-deep-charcoal border-b border-border-low-light transition-all duration-500 docked full-width top-0 sticky z-50 flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto"
+        id="top-nav">
+        <div class="font-display-lg text-headline-md tracking-tighter text-on-surface">AURELIAN</div>
+        <div class="hidden md:flex gap-12">
+            <a class="font-nav-item text-nav-item text-on-surface-variant hover:text-primary transition-colors"
+                href="index.html.html">Home</a>
+            <a class="font-nav-item text-nav-item text-primary border-b border-primary pb-1 transition-all
+                    duration-300" href="team.html.html">Our Legacy</a>
+        </div>
+        <a class="hidden md:inline-flex bg-champagne-gold text-stone-white font-label-caps text-label-caps px-6 py-3 uppercase tracking-[0.15em] transition-opacity hover:opacity-90"
+            href="contact.html.html">Start Your Build</a>
+    </nav>
+    <main>
+        <!-- Hero: The Aurelian Legacy -->
+        <section
+            class="relative h-[921px] flex items-center justify-center overflow-hidden px-margin-mobile md:px-margin-desktop">
+            <div class="relative z-10 text-center max-w-4xl">
+                <span
+                    class="font-label-caps text-label-caps text-champagne-gold block mb-6 tracking-[0.4em] reveal-on-scroll">ESTABLISHED
+                    IN EXCELLENCE</span>
+                <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 reveal-on-scroll">The Aurelian
+                    Legacy</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto reveal-on-scroll"
+                    style="transition-delay: 200ms;">
+                    To build is human. To sculpt a legacy is divine. We do not simply construct dwellings; we
+                    orchestrate the physical manifestation of your highest aspirations.
+                </p>
+                <div class="mt-12 reveal-on-scroll" style="transition-delay: 400ms;">
+                    <div class="w-px h-24 bg-gradient-to-b from-champagne-gold to-transparent mx-auto"></div>
+                </div>
+            </div>
+            <!-- Background Image Placeholder for subtle texture -->
+            <div class="absolute inset-0 -z-10 bg-[url('placeholder')] opacity-20 bg-fixed"
+                data-alt="A moody, high-contrast architectural photograph of a minimalist luxury home facade at twilight. The structure features clean lines, dark textured stone, and floor-to-ceiling glass, illuminated by soft warm golden light from within. The overall atmosphere is prestigious, mysterious, and serene, fitting a high-end luxury brand aesthetic.">
+            </div>
+        </section>
+        <!-- Philosophy: The Standard of Excellence -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+            <div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+                <div class="md:col-span-5 reveal-on-scroll">
+                    <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mb-8 leading-tight">The
+                        Standard <br /><span class="italic font-normal">of Excellence</span></h2>
+                    <div class="space-y-6">
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Uncompromising craftsmanship is our only baseline. We believe that true luxury lies in the
+                            details that most never see, but everyone feels. The grain of the hand-selected timber, the
+                            seamless transition of stone, the precise alignment of light and shadow.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            This is the 'Art of Living' — an environment that anticipates your needs and reflects your
+                            identity. Every Aurelian build is a bespoke masterpiece, meticulously tailored to the
+                            individual.
+                        </p>
+                    </div>
+                </div>
+                <div class="md:col-span-6 md:col-start-8 relative reveal-on-scroll" style="transition-delay: 200ms;">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img class="w-full h-full object-cover transition-transform duration-1000 hover:scale-105"
+                            data-alt="A close-up, macro shot of artisanal architectural details: a hand-carved stone joint meeting a brushed brass accent. The lighting is dramatic and low-key, highlighting the textures of the natural materials. The color palette is composed of deep charcoals, warm grays, and champagne gold highlights, echoing a premium luxury brand."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_DBenQnZ7ZYwRWOh0Ou5RESy6q_IfgkJb9f25uh2QrBf38cVFf1W8G0D8YkWKKEN-ELuSn0YTHNW-NdfEC4HQnVI8P5jCkBOBffBNaSpWs8z2K5hH9mvw680c4TTRDohRjYx0p6VEryQUMoAtGaz0wAq2ihDGLO8tg02gz4Kfo4gPZwrFfI_ROTpZhIPIbW1nZqIDgPuPi1jpTL5Y4MFkd63DhzZkJLl3PCc-McYxXSrQ7Em5B1Le" />
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-48 h-48 border border-champagne-gold opacity-30 hidden md:block">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- History: Narrative -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop overflow-hidden">
+            <div class="max-w-container-max mx-auto">
+                <div class="text-center mb-24 reveal-on-scroll">
+                    <span class="font-label-caps text-label-caps text-champagne-gold tracking-widest">OUR ORIGINS</span>
+                    <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl mt-4">Sculpting Environments
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+                    <div class="order-2 md:order-1 reveal-on-scroll">
+                        <div class="relative">
+                            <img class="w-full shadow-2xl"
+                                data-alt="A vintage-style but modern black and white architectural sketch of a grand estate, presented on high-quality parchment paper. The drawing is precise and elegant, surrounded by architectural tools made of dark wood and polished metal. The setting is a dimly lit, sophisticated studio with a single warm spotlight focusing on the draft."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl7ED9wrE1YhzGX4LHs6FtT-iLxf6htdQ3BZFI0g_Tv-LK6pvnaiybEzAWUwJnTYVCOaTB2nEIJFOcubEQcT5gXRM0Y5bo0E_IUAWlnnzDlXyACDmvw_cgR9A6-CAbH_IjvWF9nbOETu8D4NNQPUKezx0Q46WN9HGaiMbspSq2VimvknN-7ClIIXYfykIOH0U8wx2mRBtQl1gY5AVPc9zCkiTsLIJ6TjwkA8rnXtixbs7cGyfyk8Ue" />
+                            <div
+                                class="absolute inset-0 border border-border-low-light translate-x-4 translate-y-4 -z-10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2 reveal-on-scroll" style="transition-delay: 200ms;">
+                        <p class="font-display-lg text-headline-md italic mb-8">"We didn't set out to build houses. We
+                            set out to change how excellence is felt within four walls."</p>
+                        <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Born from a collective of rogue architects and master stonemasons, Aurelian was founded on
+                            the principle that modern construction had lost its soul. We returned to the roots of the
+                            guild system, where the creator's name was a bond of absolute quality.
+                        </p>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            For two decades, we have remained intentionally small, selecting only a handful of
+                            commissions each year to ensure that every square inch of an Aurelian home receives the
+                            attention it deserves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Aurelian Promise: Bento Grid -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-16 reveal-on-scroll">
+                    <h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl">The Aurelian Promise</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Pillar 1 -->
+                    <div
+                        class="glass-panel p-10 border border-border-low-light hover:border-champagne-gold transition-all duration-500 reveal-on-scroll">
+                        <div class="text-champagne-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'opsz' 48;">architecture</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Unrivaled Creativity</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Beyond standard floor plans. We design from the ground up, considering the celestial
+                            alignment, the topography, and your daily rituals.
+                        </p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="glass-panel p-10 border border-border-low-light hover:border-champagne-gold transition-all duration-500 reveal-on-scroll"
+                        style="transition-delay: 150ms;">
+                        <div class="text-champagne-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'opsz' 48;">precision_manufacturing</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Uncompromising Craftsmanship</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Our artisans are among the few remaining masters of their trades. We source globally and
+                            build locally to standards that exceed industry codes.
+                        </p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="glass-panel p-10 border border-border-low-light hover:border-champagne-gold transition-all duration-500 reveal-on-scroll"
+                        style="transition-delay: 300ms;">
+                        <div class="text-champagne-gold mb-8">
+                            <span class="material-symbols-outlined text-4xl"
+                                style="font-variation-settings: 'opsz' 48;">forum</span>
+                        </div>
+                        <h3 class="font-headline-md text-headline-md mb-4">Unmatched Communication</h3>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            White-glove service at every touchpoint. Your dedicated concierge ensures the build process
+                            is as seamless as the finished product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA: Start Your Legacy -->
+        <section class="py-32 px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+            <div class="absolute inset-0 bg-deep-charcoal"></div>
+            <div class="relative z-10 max-w-3xl mx-auto text-center reveal-on-scroll">
+                <h2 class="font-display-lg text-headline-xl md:text-display-lg mb-10 gold-gradient-text">Ready to Begin?
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface mb-12">
+                    Your vision deserves a physical form. Join the exclusive circle of Aurelian homeowners and start
+                    your legacy today.
+                </p>
+                <button
+                    class="group relative overflow-hidden bg-champagne-gold text-deep-charcoal font-label-caps text-label-caps px-12 py-5 transition-all">
+                    <span class="relative z-10">Start Your Legacy</span>
+                    <div
+                        class="absolute inset-0 bg-white translate-y-full transition-transform duration-300 group-hover:translate-y-0 opacity-20">
+                    </div>
+                </button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal">
+        <div class="grid grid-cols-12 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+                <div class="font-display-lg text-headline-md text-primary mb-8">AURELIAN</div>
+                <p class="font-body-md text-on-surface-variant max-w-xs">
+                    Building architectural icons that stand as a testament to those who inhabit them.
+                </p>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="12.html.html">Process</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="contact.html.html">Inquiry</a>
+                </div>
+            </div>
+            <div class="col-span-6 md:col-span-2">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">NAVIGATION</h4>
+                <div class="flex flex-col gap-4">
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="team.html.html">Our Legacy</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="about.html.html">Our Expertise</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-champagne-gold transition-colors"
+                        href="process.html.html">Clients Reviews</a>
+                </div>
+            </div>
+            <div class="col-span-12 md:col-span-4">
+                <h4 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h4>
+                <div class="flex flex-wrap gap-x-8 gap-y-4">
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Privacy Policy</a>
+                    <a class="font-body-md text-on-surface-variant hover:text-primary transition-colors"
+                        href="privacy.html.html">Terms</a>
+                </div>
+                <div class="mt-12">
+                    <p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant opacity-50">© 2024
+                        AURELIAN BESPOKE HOMES. ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Simple Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-6');
+                nav.style.backgroundColor = 'rgba(26, 26, 27, 0.95)';
+                nav.style.backdropFilter = 'blur(10px)';
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4');
+                nav.style.backgroundColor = 'transparent';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+    <div class="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
+        <!-- Chat Window (Hidden by default) -->
+        <div class="hidden w-80 bg-deep-charcoal border border-border-low-light shadow-2xl overflow-hidden transition-all duration-300"
+            id="chat-window">
+            <div class="bg-surface-container p-4 border-b border-border-low-light flex justify-between items-center">
+                <h4 class="font-display-lg text-body-lg text-champagne-gold">Aurelian Concierge</h4>
+                <button class="material-symbols-outlined text-on-surface-variant hover:text-primary"
+                    onclick="document.getElementById('chat-window').classList.add('hidden')">close</button>
+            </div>
+            <div class="h-48 p-4 overflow-y-auto flex flex-col gap-4">
+                <div class="bg-surface-container-high p-3 max-w-[80%] rounded-lg">
+                    <p class="font-body-md text-[14px] text-on-surface">Welcome to Aurelian. How may we assist with your
+                        vision today?</p>
+                </div>
+            </div>
+            <div class="p-4 border-t border-border-low-light">
+                <div class="flex gap-2">
+                    <input
+                        class="flex-1 bg-surface-container-lowest border border-border-low-light px-3 py-2 text-body-md text-[14px] focus:outline-none focus:border-champagne-gold"
+                        placeholder="Type your message..." type="text" />
+                    <button class="bg-champagne-gold text-deep-charcoal px-3 flex items-center justify-center">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- FAB and Label -->
+        <div class="flex items-center gap-4 group cursor-pointer"
+            onclick="document.getElementById('chat-window').classList.toggle('hidden')">
+            <div
+                class="bg-deep-charcoal border border-border-low-light px-4 py-2 shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span class="font-label-caps text-label-caps text-on-surface">Inquire Now</span>
+            </div>
+            <div
+                class="w-16 h-16 bg-champagne-gold flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-300">
+                <span class="material-symbols-outlined text-deep-charcoal text-3xl">chat</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
